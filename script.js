@@ -93,21 +93,22 @@ const quizData = [
 ];
 
 let activeQuestionIndex = 0;
-
-document.getElementById("startButton").addEventListener("click", function () {
-  // Quiz'i göster
+  // Baslangic butonuna tiklandiginda calisacak fonksiyon
+  document.getElementById("startButton").addEventListener("click", function () {
+  // Quiz'i goster
   document.getElementById("quizContainer").style.display = "";
   document.getElementById("header").style.display = "";
   document.getElementById("buttons").style.display = "";
   document.getElementById("quizApp").style.backgroundImage = "none";
 
-  // Başlangıç butonunu gizle
+  // Baslangic butonunu gizle
   this.style.display = "none";
 
-  // Quiz'i başlat
+  // Ilk soruyu yukle
   loadQuestion();
 });
 
+  // Aktif soruyu yukleyen fonksiyon
 function loadQuestion() {
   const currentQuestion = quizData[activeQuestionIndex];
   const questionElement = document.getElementById("questionContainer");
@@ -136,6 +137,7 @@ function loadQuestion() {
   });
 }
 
+// Bir sonraki soruya gecmeyi saglayan fonksiyon
 function goToNextQuestion() {
   if (activeQuestionIndex < quizData.length - 1) {
     activeQuestionIndex++;
@@ -149,6 +151,8 @@ function goToNextQuestion() {
     document.getElementById("quizContainer").appendChild(resultButton);
   }
 }
+
+// Sonuclari gosteren karti olusturan fonksiyon
 function showResultsCard() {
   const card = document.createElement("div");
   card.className = "result-card";
@@ -183,6 +187,7 @@ function showResultsCard() {
   }
 }
 
+// Dogru cevap sayisini hesaplayan fonksiyon
 function calculateCorrectAnswers() {
   let correctCount = 0;
   userAnswers.forEach((answer) => {
@@ -211,6 +216,7 @@ document.getElementById("previousButton").addEventListener("click", () => {
   }
 });
 
+// Buton gorunurlugunu ayarlayan fonksiyon
 function updateButtonVisibility() {
   if (activeQuestionIndex >= quizData.length) {
     document.getElementById("nextButton").style.display = "none";
@@ -225,18 +231,22 @@ function updateButtonVisibility() {
   }
 }
 
+// Ilk soruyu yukler ve buton gorunurlugunu ayarlar
 window.onload = function () {
   activeQuestionIndex = 0;
   updateButtonVisibility();
   //loadQuestion();
 };
 
+// Kullanicinin cevaplarini tutan dizi
 let userAnswers = new Array(quizData.length).fill(-1);
 
+// Secilen cevabi kaydeden fonksiyon
 function selectAnswer(questionIndex, selectedAnswerIndex) {
   userAnswers[questionIndex] = selectedAnswerIndex;
 }
 
+// Cevabi kontrol eden ve kullanici cevaplarini guncelleyen fonksiyon
 function checkAnswer(isCorrect, answerIndex) {
   userAnswers[activeQuestionIndex] = {
     selectedAnswer: answerIndex,
@@ -244,6 +254,7 @@ function checkAnswer(isCorrect, answerIndex) {
   };
 }
 
+// Reset tusuna basinca sayfayi yenileyen islev
 window.onload = function () {
   document.getElementById("resetButton").addEventListener("click", function () {
     window.location.reload();
