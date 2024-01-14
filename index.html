@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>QUIZAPP</title>
-</head>
-<body>
-    <h1 id="header">QUIZ: A2 PASSATO PROSSIMO</h1>
-    <div id="quizContainer"> 
+  </head>
+  <body>
+    <div id="quizApp">
+      <h1 id="header" style="display: none">QUIZ: PASSATO PROSSIMO</h1>
+      <button id="startButton">START QUIZ</button>
+      <div id="quizContainer" style="display: none">
         <h1 id="questionNumber"></h1>
-         <div id="questionContainer"></div>
-         <div id="answersListContainer">
-         <ul id="answersList"></ul>
+        <div id="questionContainer"></div>
+        <div id="answersListContainer">
+          <ul id="answersList"></ul>
         </div>
+      </div>
+      <div id="buttons" style="display: none">
+        <button class="buttonClass" id="previousButton">PREVIOUS</button>
+        <button class="buttonClass" id="nextButton">NEXT</button>
+        <button class="buttonClass" id="resetButton">RESET</button>
+      </div>
     </div>
-    <div id="buttons">
-    
-    <button class="buttonClass" id="previousButton">PREVIOUS</button>
-    <button class="buttonClass" id="nextButton">NEXT</button>
-    <button class="buttonClass" id="resetButton">RESET</button>
-    </div>
-
-
-
 
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>

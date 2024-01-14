@@ -94,6 +94,20 @@ const quizData = [
 
 let activeQuestionIndex = 0;
 
+document.getElementById("startButton").addEventListener("click", function () {
+  // Quiz'i göster
+  document.getElementById("quizContainer").style.display = "";
+  document.getElementById("header").style.display = "";
+  document.getElementById("buttons").style.display = "";
+  document.getElementById("quizApp").style.backgroundImage = "none";
+
+  // Başlangıç butonunu gizle
+  this.style.display = "none";
+
+  // Quiz'i başlat
+  loadQuestion();
+});
+
 function loadQuestion() {
   const currentQuestion = quizData[activeQuestionIndex];
   const questionElement = document.getElementById("questionContainer");
@@ -214,7 +228,7 @@ function updateButtonVisibility() {
 window.onload = function () {
   activeQuestionIndex = 0;
   updateButtonVisibility();
-  loadQuestion();
+  //loadQuestion();
 };
 
 let userAnswers = new Array(quizData.length).fill(-1);
