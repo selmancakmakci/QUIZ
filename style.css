@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#quizContainer {
+  box-shadow: 2px 2px #6a99cc;
+  width: 50em;
+  height: 25em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 30px;
+  border-radius: 45px;
+  background-color: #7aa8da;
+}
+
+.buttonClass {
+  margin: auto;
+  padding: 10px 20px;
+  margin-top: 2em;
+  font-size: 15px;
+  width: 8em;
+  height: 3em;
+  border-radius: 15px;
+  border: none;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+}
+
+.buttonClass:hover {
+  background-color: #0069d9;
+  transform: scale(1.06);
+}
+
+#answersListContainer {
+  width: 80%;
+}
+
+#questionContainer {
+  width: 80%;
+  height: 3em;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 30px;
+
+  background-color: white;
+  border-radius: 35px;
+  box-shadow: 2px 2px 2px 2px rgb(208, 196, 196);
+  font-family: "Righteous", sans-serif;
+}
+
+#answersList {
+  height: 11em;
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px rgb(208, 196, 196);
+  padding: 0 30px;
+  row-gap: 14px;
+  column-gap: -2px;
+  border-radius: 55px;
+}
+
+li {
+  padding-top: 10px;
+  box-sizing: border-box;
+  background-color: rgba(169, 169, 169, 0.604);
+  box-shadow: 1px 1px 1px 1px rgb(208, 196, 196);
+  cursor: pointer;
+  font-size: 25px;
+  border-radius: 20px;
+  list-style-type: none;
+  text-align: center;
+  margin: auto;
+  height: 2em;
+  width: 9.5em;
+
+  font-family: "Righteous", sans-serif;
+}
+
+li:hover {
+  background-color: #0069d9;
+  transform: scale(1.07);
+  color: white;
+}
+
+.selected-answer {
+  background-color: aqua;
+}
+
+#showResultsButton {
+  width: 21em;
+  height: 35em;
+
+  border-radius: 35px;
+  text-align: center;
+  background-image: url(https://img.freepik.com/free-vector/hand-drawn-people-asking-questions-illustration_23-2148906555.jpg?w=2000&t=st=1705207964~exp=1705208564~hmac=b7ba0d41bcf1f723fe3a270220cc2dd5b38a2c33091789e3567c6eb7668140bd);
+  background-size: cover;
+  cursor: pointer;
+  padding-top: 0.2em;
+  font-size: 40px;
+  font-family: "Permanent Marker", cursive;
+  color: rgb(128, 0, 0);
+  font-weight: bolder;
+  margin-top: -0.2em;
+  margin-bottom: -0.2em;
+}
+
+h1 {
+  font-size: 30px;
+  margin-top: -5px;
+  border-radius: 35px;
+
+  background-color: white;
+  padding: 10px 10px 10px 10px;
+  box-shadow: 2px 2px 2px 2px rgb(208, 196, 196);
+  font-family: "Righteous", sans-serif;
+}
+
+.result-card {
+  /* Uygun bir yükseklik */
+  background-size: cover;
+  background-position: center;
+  background-color: aqua;
+  width: 52em;
+  height: 52em;
+  border-radius: 35px;
+}
+
+.result-card p {
+  text-align: center;
+  padding-top: 1.05em;
+  font-size: 65px;
+  font-weight: bolder;
+  width: 3em;
+  height: 2em;
+  background-color: white;
+  margin: auto;
+  margin-top: 1.8em;
+  border-radius: 50%;
+  color: blue;
+  font-family: "Righteous", sans-serif;
+}
