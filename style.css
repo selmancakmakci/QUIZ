@@ -149,7 +149,6 @@ h1 {
 }
 
 .result-card {
-  /* Uygun bir yükseklik */
   background-size: cover;
   background-position: center;
   background-color: aqua;
@@ -174,11 +173,9 @@ h1 {
 }
 
 @media (max-width: 600px) {
-  /* Mobil cihazlar için stiller */
   .result-card {
     font-size: 14px;
   }
-  /* Diğer mobil uyumlu stiller */
 }
 
 #header {

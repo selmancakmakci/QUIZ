@@ -18,7 +18,7 @@ const quizData = [
     ],
   },
   {
-    question: "Io e mia madre ____________ il pollo arrosto per pranzo",
+    question: "Io e mia madre ____________ il pollo arrosto per pranzo.",
     answers: [
       { text: "siamo preparate", isCorrect: false },
       { text: "avete preparato", isCorrect: false },
@@ -64,7 +64,7 @@ const quizData = [
     ],
   },
   {
-    question: "Cosa ti é sucesso? ________ l'autobus",
+    question: "Cosa ti é successo? ________ l'autobus.",
     answers: [
       { text: "Sono perduto", isCorrect: false },
       { text: "Ho perso", isCorrect: true },
@@ -93,8 +93,10 @@ const quizData = [
 ];
 
 let activeQuestionIndex = 0;
-  // Baslangic butonuna tiklandiginda calisacak fonksiyon
-  document.getElementById("startButton").addEventListener("click", function () {
+
+
+// Baslangic butonuna tiklandiginda calisacak fonksiyon
+document.getElementById("startButton").addEventListener("click", function () {
   // Quiz'i goster
   document.getElementById("quizContainer").style.display = "";
   document.getElementById("header").style.display = "";
@@ -108,7 +110,7 @@ let activeQuestionIndex = 0;
   loadQuestion();
 });
 
-  // Aktif soruyu yukleyen fonksiyon
+// Aktif soruyu yukleyen fonksiyon
 function loadQuestion() {
   const currentQuestion = quizData[activeQuestionIndex];
   const questionElement = document.getElementById("questionContainer");
